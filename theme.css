@@ -113,6 +113,7 @@ input[type="checkbox"]:checked {
     background: var(--tab-background-active);
 }
 
+
 /* ═══════════════════════════════════════════════════
    03 · PAPER & INK  (light)
    Warm off-white, near-black ink, serif type, print minimal
@@ -132,7 +133,7 @@ body.lumen-paper-ink {
 
     /* Text */
     --text-normal:      #1f1d18;
-    --text-muted:       #7c7464;
+    --text-muted:       #6a6254;
     --text-faint:       #b0a890;
     --text-on-accent:   #f8f4ec;
     --text-accent:      #3d3830;
@@ -162,23 +163,27 @@ body.lumen-paper-ink {
     --h2-color:   #141310;
     --h3-color:   #1f1d18;
     --h4-color:   #1f1d18;
-    --h5-color:   #3d3830;
-    --h6-color:   #7c7464;
+    --h5-color:   #6a6254;
+    --h6-color:   #a09888;
     --h1-weight:  700;
     --h2-weight:  700;
     --h3-weight:  600;
     --h4-weight:  600;
-    --h1-size:    2em;
-    --h2-size:    1.6em;
-    --h3-size:    1.3em;
-    --h4-size:    1.1em;
+    --h5-weight:  500;
+    --h6-weight:  400;
+    --h1-size:    2.4em;
+    --h2-size:    1.8em;
+    --h3-size:    1.4em;
+    --h4-size:    1.15em;
+    --h5-size:    1em;
+    --h6-size:    0.88em;
     --h1-font:    Georgia, "Palatino Linotype", "Book Antiqua", serif;
     --h2-font:    Georgia, "Palatino Linotype", "Book Antiqua", serif;
 
     /* Bold / Italic */
     --bold-color:   #0a0a08;
     --bold-weight:  700;
-    --italic-color: #3d3830;
+    --italic-color: #4a4438;
 
     /* Code */
     --code-background: #ede5d4;
@@ -195,9 +200,9 @@ body.lumen-paper-ink {
     --code-size:       0.88em;
 
     /* Blockquote */
-    --blockquote-border-color:     #0a0a08;
+    --blockquote-border-color:     #3d3830;
     --blockquote-border-thickness: 2px;
-    --blockquote-background-color: rgba(61, 56, 48, 0.04);
+    --blockquote-background-color: rgba(61, 56, 48, 0.05);
     --blockquote-color:            #3d3830;
     --blockquote-font-style:       italic;
 
@@ -210,7 +215,7 @@ body.lumen-paper-ink {
 
     /* Nav */
     --nav-indentation-guide-color:    #d8cfb8;
-    --nav-item-color:                 #7c7464;
+    --nav-item-color:                 #6a6254;
     --nav-item-color-active:          #0a0a08;
     --nav-item-background-active:     #e2d8be;
     --nav-item-background-hover:      #e8e1cc;
@@ -238,14 +243,39 @@ body.lumen-paper-ink {
     --file-line-width:      720px;
 }
 
-/* Paper & Ink — headings */
+/* Paper & Ink — explicit heading hierarchy */
 body.lumen-paper-ink .markdown-rendered h1,
-body.lumen-paper-ink .markdown-rendered h2 {
+body.lumen-paper-ink .cm-editor .HyperMD-header-1 {
+    font-size: 2.4em; font-weight: 700; color: #0a0a08;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
 }
+body.lumen-paper-ink .markdown-rendered h2,
+body.lumen-paper-ink .cm-editor .HyperMD-header-2 {
+    font-size: 1.8em; font-weight: 700; color: #141310;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+}
+body.lumen-paper-ink .markdown-rendered h3,
+body.lumen-paper-ink .cm-editor .HyperMD-header-3 {
+    font-size: 1.4em; font-weight: 600; color: #1f1d18;
+}
+body.lumen-paper-ink .markdown-rendered h4,
+body.lumen-paper-ink .cm-editor .HyperMD-header-4 {
+    font-size: 1.15em; font-weight: 600; color: #1f1d18;
+}
+body.lumen-paper-ink .markdown-rendered h5,
+body.lumen-paper-ink .cm-editor .HyperMD-header-5 {
+    font-size: 1em; font-weight: 600; color: #6a6254; text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+body.lumen-paper-ink .markdown-rendered h6,
+body.lumen-paper-ink .cm-editor .HyperMD-header-6 {
+    font-size: 0.9em; font-weight: 500; color: #a09888;
+}
+
+/* Paper & Ink — h1 gradient border */
 body.lumen-paper-ink .markdown-rendered h1 {
     border-bottom: 1.5px solid;
-    border-image-source: linear-gradient(to right, #0a0a08 0%, transparent 100%);
+    border-image-source: linear-gradient(to right, #0a0a08 0%, transparent 80%);
     border-image-slice: 1;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -254,6 +284,7 @@ body.lumen-paper-ink .markdown-rendered h1 {
 /* Paper & Ink — links (gradient underline reveal) */
 body.lumen-paper-ink .markdown-rendered .internal-link,
 body.lumen-paper-ink .markdown-rendered .external-link {
+    color: #3d3830;
     text-decoration: none;
     background-image: linear-gradient(to right, #3d3830, #3d3830);
     background-size: 0 1.5px;
@@ -268,18 +299,19 @@ body.lumen-paper-ink .markdown-rendered .external-link:hover {
 
 /* Paper & Ink — blockquote */
 body.lumen-paper-ink .markdown-rendered blockquote {
-    border-left: 2px solid #0a0a08;
-    background: rgba(61, 56, 48, 0.04);
+    border-left: 2px solid #3d3830;
+    background: rgba(61, 56, 48, 0.05);
     border-radius: 0 4px 4px 0;
     padding: 6px 18px;
     margin: 0 0 16px;
+    color: #3d3830;
 }
 
-/* Paper & Ink — bold in editor and preview */
+/* Paper & Ink — bold / italic */
 body.lumen-paper-ink .markdown-rendered strong,
-body.lumen-paper-ink .cm-strong { color: #0a0a08; }
+body.lumen-paper-ink .cm-strong { color: #0a0a08; font-weight: 700; }
 body.lumen-paper-ink .markdown-rendered em,
-body.lumen-paper-ink .cm-em    { color: #3d3830; }
+body.lumen-paper-ink .cm-em    { color: #4a4438; }
 
 /* Paper & Ink — inline code */
 body.lumen-paper-ink .markdown-rendered code,
@@ -287,7 +319,7 @@ body.lumen-paper-ink .cm-inline-code {
     background: #ede5d4;
     color: #1f1d18;
     border-radius: 3px;
-    padding: 0 5px;
+    padding: 1px 5px;
     font-size: 0.88em;
 }
 
@@ -311,7 +343,7 @@ body.lumen-lavender-fog {
 
     /* Text */
     --text-normal:      #2e2538;
-    --text-muted:       #847893;
+    --text-muted:       #7a6e88;
     --text-faint:       #b4a8c2;
     --text-on-accent:   #ffffff;
     --text-accent:      #6b5b95;
@@ -341,15 +373,20 @@ body.lumen-lavender-fog {
     --h2-color:   #2a1e38;
     --h3-color:   #3a2c4c;
     --h4-color:   #2e2538;
-    --h5-color:   #6b5b95;
-    --h6-color:   #847893;
-    --h1-weight:  600;
+    --h5-color:   #7a6e88;
+    --h6-color:   #a49ab2;
+    --h1-weight:  700;
     --h2-weight:  600;
-    --h3-weight:  500;
+    --h3-weight:  600;
     --h4-weight:  500;
-    --h1-size:    1.8em;
-    --h2-size:    1.5em;
-    --h3-size:    1.25em;
+    --h5-weight:  600;
+    --h6-weight:  400;
+    --h1-size:    2.2em;
+    --h2-size:    1.7em;
+    --h3-size:    1.35em;
+    --h4-size:    1.12em;
+    --h5-size:    1em;
+    --h6-size:    0.88em;
 
     /* Bold / Italic */
     --bold-color:   #6b5b95;
@@ -369,9 +406,9 @@ body.lumen-lavender-fog {
     --code-size:       0.88em;
 
     /* Blockquote */
-    --blockquote-border-color:     #b8a5d4;
+    --blockquote-border-color:     #9b84c8;
     --blockquote-border-thickness: 3px;
-    --blockquote-background-color: rgba(107, 91, 149, 0.05);
+    --blockquote-background-color: rgba(107, 91, 149, 0.07);
     --blockquote-color:            #5a4d6a;
     --blockquote-font-style:       normal;
 
@@ -384,7 +421,7 @@ body.lumen-lavender-fog {
 
     /* Nav */
     --nav-indentation-guide-color:    #d4cadd;
-    --nav-item-color:                 #847893;
+    --nav-item-color:                 #7a6e88;
     --nav-item-color-active:          #1a1224;
     --nav-item-background-active:     #ddd2e6;
     --nav-item-background-hover:      #e4dcea;
@@ -410,7 +447,34 @@ body.lumen-lavender-fog {
     --file-line-width:      720px;
 }
 
-/* Lavender Fog — headings */
+/* Lavender Fog — explicit heading hierarchy */
+body.lumen-lavender-fog .markdown-rendered h1,
+body.lumen-lavender-fog .cm-editor .HyperMD-header-1 {
+    font-size: 2.2em; font-weight: 700; color: #1a1224;
+}
+body.lumen-lavender-fog .markdown-rendered h2,
+body.lumen-lavender-fog .cm-editor .HyperMD-header-2 {
+    font-size: 1.7em; font-weight: 600; color: #2a1e38;
+}
+body.lumen-lavender-fog .markdown-rendered h3,
+body.lumen-lavender-fog .cm-editor .HyperMD-header-3 {
+    font-size: 1.35em; font-weight: 600; color: #3a2c4c;
+}
+body.lumen-lavender-fog .markdown-rendered h4,
+body.lumen-lavender-fog .cm-editor .HyperMD-header-4 {
+    font-size: 1.12em; font-weight: 500; color: #2e2538;
+}
+body.lumen-lavender-fog .markdown-rendered h5,
+body.lumen-lavender-fog .cm-editor .HyperMD-header-5 {
+    font-size: 1em; font-weight: 600; color: #7a6e88;
+    text-transform: uppercase; letter-spacing: 0.06em;
+}
+body.lumen-lavender-fog .markdown-rendered h6,
+body.lumen-lavender-fog .cm-editor .HyperMD-header-6 {
+    font-size: 0.9em; font-weight: 400; color: #a49ab2;
+}
+
+/* Lavender Fog — h1 gradient border */
 body.lumen-lavender-fog .markdown-rendered h1 {
     border-bottom: 1.5px solid;
     border-image-source: linear-gradient(to right, #6b5b95 0%, transparent 70%);
@@ -422,6 +486,7 @@ body.lumen-lavender-fog .markdown-rendered h1 {
 /* Lavender Fog — links */
 body.lumen-lavender-fog .markdown-rendered .internal-link,
 body.lumen-lavender-fog .markdown-rendered .external-link {
+    color: #6b5b95;
     text-decoration: none;
     background-image: linear-gradient(to right, #6b5b95, #6b5b95);
     background-size: 0 1.5px;
@@ -436,8 +501,8 @@ body.lumen-lavender-fog .markdown-rendered .external-link:hover {
 
 /* Lavender Fog — blockquote */
 body.lumen-lavender-fog .markdown-rendered blockquote {
-    border-left: 3px solid #b8a5d4;
-    background: rgba(107, 91, 149, 0.05);
+    border-left: 3px solid #9b84c8;
+    background: rgba(107, 91, 149, 0.07);
     border-radius: 0 6px 6px 0;
     padding: 8px 18px;
     margin: 0 0 16px;
@@ -445,7 +510,7 @@ body.lumen-lavender-fog .markdown-rendered blockquote {
 
 /* Lavender Fog — bold / italic */
 body.lumen-lavender-fog .markdown-rendered strong,
-body.lumen-lavender-fog .cm-strong { color: #6b5b95; }
+body.lumen-lavender-fog .cm-strong { color: #6b5b95; font-weight: 700; }
 body.lumen-lavender-fog .markdown-rendered em,
 body.lumen-lavender-fog .cm-em    { color: #8a7aaa; font-style: italic; }
 
@@ -453,9 +518,9 @@ body.lumen-lavender-fog .cm-em    { color: #8a7aaa; font-style: italic; }
 body.lumen-lavender-fog .markdown-rendered code,
 body.lumen-lavender-fog .cm-inline-code {
     background: rgba(107, 91, 149, 0.1);
-    color: #6b5b95;
+    color: #5a4a82;
     border-radius: 4px;
-    padding: 0 5px;
+    padding: 1px 5px;
     font-size: 0.88em;
 }
 
@@ -479,7 +544,7 @@ body.lumen-iron-press {
 
     /* Text */
     --text-normal:      #1d1d1c;
-    --text-muted:       #6c6a64;
+    --text-muted:       #5e5c56;
     --text-faint:       #a09e96;
     --text-on-accent:   #f0eeea;
     --text-accent:      #8a1818;
@@ -509,22 +574,27 @@ body.lumen-iron-press {
     --h2-color:   #111110;
     --h3-color:   #1d1d1c;
     --h4-color:   #1d1d1c;
-    --h5-color:   #8a1818;
-    --h6-color:   #6c6a64;
+    --h5-color:   #5e5c56;
+    --h6-color:   #8e8a82;
     --h1-weight:  800;
     --h2-weight:  700;
     --h3-weight:  700;
     --h4-weight:  600;
-    --h1-size:    2.2em;
-    --h2-size:    1.65em;
-    --h3-size:    1.3em;
+    --h5-weight:  600;
+    --h6-weight:  400;
+    --h1-size:    2.4em;
+    --h2-size:    1.8em;
+    --h3-size:    1.4em;
+    --h4-size:    1.15em;
+    --h5-size:    1em;
+    --h6-size:    0.88em;
     --h1-font:    Georgia, "Playfair Display", "Palatino Linotype", serif;
     --h2-font:    Georgia, "Palatino Linotype", serif;
 
     /* Bold / Italic */
     --bold-color:   #8a1818;
     --bold-weight:  700;
-    --italic-color: #1d1d1c;
+    --italic-color: #2e2e2c;
 
     /* Code */
     --code-background: #d8d4ca;
@@ -541,7 +611,7 @@ body.lumen-iron-press {
     /* Blockquote */
     --blockquote-border-color:     #8a1818;
     --blockquote-border-thickness: 3px;
-    --blockquote-background-color: rgba(138, 24, 24, 0.04);
+    --blockquote-background-color: rgba(138, 24, 24, 0.05);
     --blockquote-color:            #3a3a36;
     --blockquote-font-style:       italic;
 
@@ -554,7 +624,7 @@ body.lumen-iron-press {
 
     /* Nav */
     --nav-indentation-guide-color:    #c6c2b9;
-    --nav-item-color:                 #6c6a64;
+    --nav-item-color:                 #5e5c56;
     --nav-item-color-active:          #050505;
     --nav-item-background-active:     #d0c9bd;
     --nav-item-background-hover:      #d8d4ca;
@@ -582,19 +652,44 @@ body.lumen-iron-press {
     --file-line-width:      740px;
 }
 
-/* Iron Press — headings */
+/* Iron Press — explicit heading hierarchy */
 body.lumen-iron-press .markdown-rendered h1,
-body.lumen-iron-press .markdown-rendered h2,
-body.lumen-iron-press .markdown-rendered h3 {
+body.lumen-iron-press .cm-editor .HyperMD-header-1 {
+    font-size: 2.4em; font-weight: 800; color: #050505;
     font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    letter-spacing: -0.02em;
 }
+body.lumen-iron-press .markdown-rendered h2,
+body.lumen-iron-press .cm-editor .HyperMD-header-2 {
+    font-size: 1.8em; font-weight: 700; color: #111110;
+    font-family: Georgia, "Palatino Linotype", serif;
+}
+body.lumen-iron-press .markdown-rendered h3,
+body.lumen-iron-press .cm-editor .HyperMD-header-3 {
+    font-size: 1.4em; font-weight: 700; color: #1d1d1c;
+    font-family: Georgia, "Palatino Linotype", serif;
+}
+body.lumen-iron-press .markdown-rendered h4,
+body.lumen-iron-press .cm-editor .HyperMD-header-4 {
+    font-size: 1.15em; font-weight: 600; color: #1d1d1c;
+}
+body.lumen-iron-press .markdown-rendered h5,
+body.lumen-iron-press .cm-editor .HyperMD-header-5 {
+    font-size: 1em; font-weight: 600; color: #5e5c56;
+    text-transform: uppercase; letter-spacing: 0.07em;
+}
+body.lumen-iron-press .markdown-rendered h6,
+body.lumen-iron-press .cm-editor .HyperMD-header-6 {
+    font-size: 0.9em; font-weight: 400; color: #8e8a82;
+}
+
+/* Iron Press — h1 gradient border + h2 rule */
 body.lumen-iron-press .markdown-rendered h1 {
     border-bottom: 2px solid;
     border-image-source: linear-gradient(to right, #8a1818 0%, transparent 60%);
     border-image-slice: 1;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    letter-spacing: -0.02em;
 }
 body.lumen-iron-press .markdown-rendered h2 {
     border-bottom: 1px solid #c6c2b9;
@@ -604,8 +699,8 @@ body.lumen-iron-press .markdown-rendered h2 {
 /* Iron Press — links */
 body.lumen-iron-press .markdown-rendered .internal-link,
 body.lumen-iron-press .markdown-rendered .external-link {
-    text-decoration: none;
     color: #8a1818;
+    text-decoration: none;
     background-image: linear-gradient(to right, #8a1818, #8a1818);
     background-size: 0 1.5px;
     background-position: 0 100%;
@@ -620,7 +715,7 @@ body.lumen-iron-press .markdown-rendered .external-link:hover {
 /* Iron Press — blockquote */
 body.lumen-iron-press .markdown-rendered blockquote {
     border-left: 3px solid #8a1818;
-    background: rgba(138, 24, 24, 0.04);
+    background: rgba(138, 24, 24, 0.05);
     border-radius: 0 4px 4px 0;
     padding: 8px 18px;
     margin: 0 0 16px;
@@ -628,9 +723,9 @@ body.lumen-iron-press .markdown-rendered blockquote {
 
 /* Iron Press — bold / italic */
 body.lumen-iron-press .markdown-rendered strong,
-body.lumen-iron-press .cm-strong { color: #8a1818; }
+body.lumen-iron-press .cm-strong { color: #8a1818; font-weight: 700; }
 body.lumen-iron-press .markdown-rendered em,
-body.lumen-iron-press .cm-em    { color: #1d1d1c; }
+body.lumen-iron-press .cm-em    { color: #2e2e2c; }
 
 /* Iron Press — inline code */
 body.lumen-iron-press .markdown-rendered code,
@@ -638,7 +733,7 @@ body.lumen-iron-press .cm-inline-code {
     background: #d8d4ca;
     color: #8a1818;
     border-radius: 3px;
-    padding: 0 5px;
+    padding: 1px 5px;
     font-size: 0.87em;
 }
 
@@ -662,8 +757,8 @@ body.lumen-nordic-slate {
 
     /* Text */
     --text-normal:      #d8dee9;
-    --text-muted:       #6c7689;
-    --text-faint:       #4e5a6e;
+    --text-muted:       #8898b0;
+    --text-faint:       #56637a;
     --text-on-accent:   #1e2430;
     --text-accent:      #88c0d0;
     --text-accent-hover:#9dd0e0;
@@ -683,7 +778,7 @@ body.lumen-nordic-slate {
     --link-color-hover:         #9dd0e0;
     --link-external-color:      #81a1c1;
     --link-external-color-hover:#8ab2d8;
-    --link-unresolved-color:    #4e5a6e;
+    --link-unresolved-color:    #56637a;
     --link-decoration:          none;
     --link-external-decoration: none;
 
@@ -691,16 +786,21 @@ body.lumen-nordic-slate {
     --h1-color:   #eceff4;
     --h2-color:   #e5e9f0;
     --h3-color:   #d8dee9;
-    --h4-color:   #d8dee9;
-    --h5-color:   #88c0d0;
-    --h6-color:   #6c7689;
-    --h1-weight:  500;
-    --h2-weight:  500;
+    --h4-color:   #cdd4e2;
+    --h5-color:   #8898b0;
+    --h6-color:   #56637a;
+    --h1-weight:  600;
+    --h2-weight:  600;
     --h3-weight:  500;
     --h4-weight:  500;
-    --h1-size:    1.85em;
-    --h2-size:    1.5em;
-    --h3-size:    1.25em;
+    --h5-weight:  600;
+    --h6-weight:  400;
+    --h1-size:    2.1em;
+    --h2-size:    1.65em;
+    --h3-size:    1.32em;
+    --h4-size:    1.12em;
+    --h5-size:    1em;
+    --h6-size:    0.88em;
 
     /* Bold / Italic */
     --bold-color:   #88c0d0;
@@ -724,20 +824,20 @@ body.lumen-nordic-slate {
     /* Blockquote */
     --blockquote-border-color:     #5e81ac;
     --blockquote-border-thickness: 3px;
-    --blockquote-background-color: rgba(136, 192, 208, 0.06);
-    --blockquote-color:            #aab4c4;
+    --blockquote-background-color: rgba(136, 192, 208, 0.07);
+    --blockquote-color:            #b4bece;
     --blockquote-font-style:       normal;
 
     /* Tags */
     --tag-color:            #88c0d0;
     --tag-background:       rgba(136, 192, 208, 0.1);
     --tag-background-hover: rgba(136, 192, 208, 0.2);
-    --tag-border-color:     rgba(136, 192, 208, 0.25);
+    --tag-border-color:     rgba(136, 192, 208, 0.3);
     --tag-radius:           2em;
 
     /* Nav */
     --nav-indentation-guide-color:    rgba(136, 192, 208, 0.2);
-    --nav-item-color:                 #6c7689;
+    --nav-item-color:                 #8898b0;
     --nav-item-color-active:          #eceff4;
     --nav-item-background-active:     #3b4456;
     --nav-item-background-hover:      #353d4d;
@@ -752,7 +852,7 @@ body.lumen-nordic-slate {
     /* Tables */
     --table-border-color:             #3b4252;
     --table-header-background:        #292f3a;
-    --table-row-background-hover:     rgba(136, 192, 208, 0.06);
+    --table-row-background-hover:     rgba(136, 192, 208, 0.07);
 
     /* Shadows */
     --shadow-s: 0 1px 4px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
@@ -763,7 +863,34 @@ body.lumen-nordic-slate {
     --file-line-width:      720px;
 }
 
-/* Nordic Slate — headings */
+/* Nordic Slate — explicit heading hierarchy */
+body.lumen-nordic-slate .markdown-rendered h1,
+body.lumen-nordic-slate .cm-editor .HyperMD-header-1 {
+    font-size: 2.1em; font-weight: 600; color: #eceff4;
+}
+body.lumen-nordic-slate .markdown-rendered h2,
+body.lumen-nordic-slate .cm-editor .HyperMD-header-2 {
+    font-size: 1.65em; font-weight: 600; color: #e5e9f0;
+}
+body.lumen-nordic-slate .markdown-rendered h3,
+body.lumen-nordic-slate .cm-editor .HyperMD-header-3 {
+    font-size: 1.32em; font-weight: 500; color: #d8dee9;
+}
+body.lumen-nordic-slate .markdown-rendered h4,
+body.lumen-nordic-slate .cm-editor .HyperMD-header-4 {
+    font-size: 1.12em; font-weight: 500; color: #cdd4e2;
+}
+body.lumen-nordic-slate .markdown-rendered h5,
+body.lumen-nordic-slate .cm-editor .HyperMD-header-5 {
+    font-size: 1em; font-weight: 600; color: #8898b0;
+    text-transform: uppercase; letter-spacing: 0.07em;
+}
+body.lumen-nordic-slate .markdown-rendered h6,
+body.lumen-nordic-slate .cm-editor .HyperMD-header-6 {
+    font-size: 0.9em; font-weight: 400; color: #56637a;
+}
+
+/* Nordic Slate — h1 subtle border */
 body.lumen-nordic-slate .markdown-rendered h1 {
     border-bottom: 1px solid #3b4252;
     padding-bottom: 8px;
@@ -773,6 +900,7 @@ body.lumen-nordic-slate .markdown-rendered h1 {
 /* Nordic Slate — links */
 body.lumen-nordic-slate .markdown-rendered .internal-link,
 body.lumen-nordic-slate .markdown-rendered .external-link {
+    color: #88c0d0;
     text-decoration: none;
     background-image: linear-gradient(to right, #88c0d0, #88c0d0);
     background-size: 0 1.5px;
@@ -788,25 +916,26 @@ body.lumen-nordic-slate .markdown-rendered .external-link:hover {
 /* Nordic Slate — blockquote */
 body.lumen-nordic-slate .markdown-rendered blockquote {
     border-left: 3px solid #5e81ac;
-    background: rgba(136, 192, 208, 0.06);
+    background: rgba(136, 192, 208, 0.07);
     border-radius: 0 6px 6px 0;
     padding: 8px 18px;
     margin: 0 0 16px;
+    color: #b4bece;
 }
 
 /* Nordic Slate — bold / italic */
 body.lumen-nordic-slate .markdown-rendered strong,
-body.lumen-nordic-slate .cm-strong { color: #88c0d0; }
+body.lumen-nordic-slate .cm-strong { color: #88c0d0; font-weight: 700; }
 body.lumen-nordic-slate .markdown-rendered em,
 body.lumen-nordic-slate .cm-em    { color: #a3be8c; font-style: italic; }
 
 /* Nordic Slate — inline code */
 body.lumen-nordic-slate .markdown-rendered code,
 body.lumen-nordic-slate .cm-inline-code {
-    background: rgba(136, 192, 208, 0.1);
+    background: rgba(136, 192, 208, 0.12);
     color: #88c0d0;
     border-radius: 4px;
-    padding: 0 5px;
+    padding: 1px 5px;
     font-size: 0.88em;
 }
 
@@ -830,7 +959,7 @@ body.lumen-soft-dusk {
 
     /* Text */
     --text-normal:      #d4c5d8;
-    --text-muted:       #8a7a90;
+    --text-muted:       #9888a4;
     --text-faint:       #5e5068;
     --text-on-accent:   #1e1628;
     --text-accent:      #e0a8b8;
@@ -858,17 +987,22 @@ body.lumen-soft-dusk {
     /* Headings */
     --h1-color:   #f0e4ed;
     --h2-color:   #e4d6e2;
-    --h3-color:   #d4c5d8;
-    --h4-color:   #d4c5d8;
-    --h5-color:   #e0a8b8;
-    --h6-color:   #8a7a90;
-    --h1-weight:  500;
-    --h2-weight:  500;
+    --h3-color:   #d8c8dc;
+    --h4-color:   #cdbcd2;
+    --h5-color:   #9888a4;
+    --h6-color:   #6a5c74;
+    --h1-weight:  600;
+    --h2-weight:  600;
     --h3-weight:  500;
     --h4-weight:  500;
-    --h1-size:    1.9em;
-    --h2-size:    1.5em;
-    --h3-size:    1.25em;
+    --h5-weight:  600;
+    --h6-weight:  400;
+    --h1-size:    2.1em;
+    --h2-size:    1.65em;
+    --h3-size:    1.32em;
+    --h4-size:    1.12em;
+    --h5-size:    1em;
+    --h6-size:    0.88em;
     --h1-font:    Georgia, "Palatino Linotype", serif;
 
     /* Bold / Italic */
@@ -893,20 +1027,20 @@ body.lumen-soft-dusk {
     /* Blockquote */
     --blockquote-border-color:     #b8a5d4;
     --blockquote-border-thickness: 3px;
-    --blockquote-background-color: rgba(224, 168, 184, 0.06);
-    --blockquote-color:            #a89aaf;
+    --blockquote-background-color: rgba(224, 168, 184, 0.07);
+    --blockquote-color:            #b4a4bc;
     --blockquote-font-style:       italic;
 
     /* Tags */
     --tag-color:            #e0a8b8;
     --tag-background:       rgba(224, 168, 184, 0.1);
     --tag-background-hover: rgba(224, 168, 184, 0.2);
-    --tag-border-color:     rgba(224, 168, 184, 0.25);
+    --tag-border-color:     rgba(224, 168, 184, 0.28);
     --tag-radius:           2em;
 
     /* Nav */
     --nav-indentation-guide-color:    rgba(224, 168, 184, 0.18);
-    --nav-item-color:                 #8a7a90;
+    --nav-item-color:                 #9888a4;
     --nav-item-color-active:          #f0e4ed;
     --nav-item-background-active:     #3d3149;
     --nav-item-background-hover:      #332840;
@@ -934,13 +1068,38 @@ body.lumen-soft-dusk {
     --file-line-width:      720px;
 }
 
-/* Soft Dusk — headings */
+/* Soft Dusk — explicit heading hierarchy */
 body.lumen-soft-dusk .markdown-rendered h1,
-body.lumen-soft-dusk .markdown-rendered h2 {
-    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+body.lumen-soft-dusk .cm-editor .HyperMD-header-1 {
+    font-size: 2.1em; font-weight: 600; color: #f0e4ed;
+    font-family: Georgia, "Palatino Linotype", serif;
 }
+body.lumen-soft-dusk .markdown-rendered h2,
+body.lumen-soft-dusk .cm-editor .HyperMD-header-2 {
+    font-size: 1.65em; font-weight: 600; color: #e4d6e2;
+    font-family: Georgia, "Palatino Linotype", serif;
+}
+body.lumen-soft-dusk .markdown-rendered h3,
+body.lumen-soft-dusk .cm-editor .HyperMD-header-3 {
+    font-size: 1.32em; font-weight: 500; color: #d8c8dc;
+}
+body.lumen-soft-dusk .markdown-rendered h4,
+body.lumen-soft-dusk .cm-editor .HyperMD-header-4 {
+    font-size: 1.12em; font-weight: 500; color: #cdbcd2;
+}
+body.lumen-soft-dusk .markdown-rendered h5,
+body.lumen-soft-dusk .cm-editor .HyperMD-header-5 {
+    font-size: 1em; font-weight: 600; color: #9888a4;
+    text-transform: uppercase; letter-spacing: 0.07em;
+}
+body.lumen-soft-dusk .markdown-rendered h6,
+body.lumen-soft-dusk .cm-editor .HyperMD-header-6 {
+    font-size: 0.9em; font-weight: 400; color: #6a5c74;
+}
+
+/* Soft Dusk — h1 subtle border */
 body.lumen-soft-dusk .markdown-rendered h1 {
-    border-bottom: 1px solid #3a2f44;
+    border-bottom: 1px solid #4a3d58;
     padding-bottom: 8px;
     margin-bottom: 18px;
 }
@@ -948,6 +1107,7 @@ body.lumen-soft-dusk .markdown-rendered h1 {
 /* Soft Dusk — links */
 body.lumen-soft-dusk .markdown-rendered .internal-link,
 body.lumen-soft-dusk .markdown-rendered .external-link {
+    color: #e0a8b8;
     text-decoration: none;
     background-image: linear-gradient(to right, #e0a8b8, #e0a8b8);
     background-size: 0 1.5px;
@@ -963,25 +1123,26 @@ body.lumen-soft-dusk .markdown-rendered .external-link:hover {
 /* Soft Dusk — blockquote */
 body.lumen-soft-dusk .markdown-rendered blockquote {
     border-left: 3px solid #b8a5d4;
-    background: rgba(224, 168, 184, 0.06);
+    background: rgba(224, 168, 184, 0.07);
     border-radius: 0 6px 6px 0;
     padding: 8px 18px;
     margin: 0 0 16px;
+    color: #b4a4bc;
 }
 
 /* Soft Dusk — bold / italic */
 body.lumen-soft-dusk .markdown-rendered strong,
-body.lumen-soft-dusk .cm-strong { color: #e0a8b8; }
+body.lumen-soft-dusk .cm-strong { color: #e0a8b8; font-weight: 700; }
 body.lumen-soft-dusk .markdown-rendered em,
 body.lumen-soft-dusk .cm-em    { color: #c8a4d4; font-style: italic; }
 
 /* Soft Dusk — inline code */
 body.lumen-soft-dusk .markdown-rendered code,
 body.lumen-soft-dusk .cm-inline-code {
-    background: rgba(224, 168, 184, 0.1);
-    color: #e0a8b8;
+    background: rgba(200, 164, 212, 0.12);
+    color: #c8a4d4;
     border-radius: 4px;
-    padding: 0 5px;
+    padding: 1px 5px;
     font-size: 0.88em;
 }
 
@@ -996,17 +1157,17 @@ body.lumen-tokyo-night {
     --background-primary-alt:           #16171f;
     --background-secondary:             #16161e;
     --background-secondary-alt:         #101019;
-    --background-modifier-border:       #232433;
-    --background-modifier-border-hover: #333450;
+    --background-modifier-border:       #2a2b3d;
+    --background-modifier-border-hover: #373858;
     --background-modifier-hover:        #1f2030;
     --background-modifier-active-hover: #283457;
     --background-modifier-form-field:   #1f2030;
-    --divider-color:                    #232433;
+    --divider-color:                    #2a2b3d;
 
     /* Text */
-    --text-normal:      #a9b1d6;
-    --text-muted:       #565f89;
-    --text-faint:       #3b4166;
+    --text-normal:      #c0c8e8;
+    --text-muted:       #7a84b0;
+    --text-faint:       #454868;
     --text-on-accent:   #1a1b26;
     --text-accent:      #7aa2f7;
     --text-accent-hover:#9bbcff;
@@ -1026,7 +1187,7 @@ body.lumen-tokyo-night {
     --link-color-hover:         #9bbcff;
     --link-external-color:      #7dcfff;
     --link-external-color-hover:#9ddeff;
-    --link-unresolved-color:    #3b4166;
+    --link-unresolved-color:    #454868;
     --link-decoration:          none;
     --link-external-decoration: none;
 
@@ -1034,16 +1195,21 @@ body.lumen-tokyo-night {
     --h1-color:   #c0caf5;
     --h2-color:   #b4bef0;
     --h3-color:   #a9b1d6;
-    --h4-color:   #a9b1d6;
-    --h5-color:   #7aa2f7;
+    --h4-color:   #9ba5cc;
+    --h5-color:   #7a84b0;
     --h6-color:   #565f89;
     --h1-weight:  700;
     --h2-weight:  600;
     --h3-weight:  600;
     --h4-weight:  500;
-    --h1-size:    1.85em;
-    --h2-size:    1.5em;
-    --h3-size:    1.25em;
+    --h5-weight:  600;
+    --h6-weight:  400;
+    --h1-size:    2.1em;
+    --h2-size:    1.65em;
+    --h3-size:    1.32em;
+    --h4-size:    1.12em;
+    --h5-size:    1em;
+    --h6-size:    0.88em;
 
     /* Bold / Italic */
     --bold-color:   #7aa2f7;
@@ -1067,7 +1233,7 @@ body.lumen-tokyo-night {
     /* Blockquote */
     --blockquote-border-color:     #7dcfff;
     --blockquote-border-thickness: 3px;
-    --blockquote-background-color: rgba(122, 162, 247, 0.06);
+    --blockquote-background-color: rgba(122, 162, 247, 0.07);
     --blockquote-color:            #8a93b8;
     --blockquote-font-style:       normal;
 
@@ -1075,12 +1241,12 @@ body.lumen-tokyo-night {
     --tag-color:            #7aa2f7;
     --tag-background:       rgba(122, 162, 247, 0.1);
     --tag-background-hover: rgba(122, 162, 247, 0.2);
-    --tag-border-color:     rgba(122, 162, 247, 0.25);
+    --tag-border-color:     rgba(122, 162, 247, 0.28);
     --tag-radius:           4px;
 
     /* Nav */
     --nav-indentation-guide-color:    rgba(122, 162, 247, 0.18);
-    --nav-item-color:                 #565f89;
+    --nav-item-color:                 #7a84b0;
     --nav-item-color-active:          #c0caf5;
     --nav-item-background-active:     #283457;
     --nav-item-background-hover:      #1f2030;
@@ -1093,9 +1259,9 @@ body.lumen-tokyo-night {
     --checkbox-border-color:          #7aa2f7;
 
     /* Tables */
-    --table-border-color:             #232433;
+    --table-border-color:             #2a2b3d;
     --table-header-background:        #16161e;
-    --table-row-background-hover:     rgba(122, 162, 247, 0.06);
+    --table-row-background-hover:     rgba(122, 162, 247, 0.07);
 
     /* Shadows */
     --shadow-s: 0 1px 4px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.28);
@@ -1106,17 +1272,45 @@ body.lumen-tokyo-night {
     --file-line-width:      720px;
 }
 
-/* Tokyo Night — headings */
+/* Tokyo Night — explicit heading hierarchy */
+body.lumen-tokyo-night .markdown-rendered h1,
+body.lumen-tokyo-night .cm-editor .HyperMD-header-1 {
+    font-size: 2.1em; font-weight: 700; color: #c0caf5;
+    letter-spacing: -0.01em;
+}
+body.lumen-tokyo-night .markdown-rendered h2,
+body.lumen-tokyo-night .cm-editor .HyperMD-header-2 {
+    font-size: 1.65em; font-weight: 600; color: #b4bef0;
+}
+body.lumen-tokyo-night .markdown-rendered h3,
+body.lumen-tokyo-night .cm-editor .HyperMD-header-3 {
+    font-size: 1.32em; font-weight: 600; color: #a9b1d6;
+}
+body.lumen-tokyo-night .markdown-rendered h4,
+body.lumen-tokyo-night .cm-editor .HyperMD-header-4 {
+    font-size: 1.12em; font-weight: 500; color: #9ba5cc;
+}
+body.lumen-tokyo-night .markdown-rendered h5,
+body.lumen-tokyo-night .cm-editor .HyperMD-header-5 {
+    font-size: 1em; font-weight: 600; color: #7a84b0;
+    text-transform: uppercase; letter-spacing: 0.07em;
+}
+body.lumen-tokyo-night .markdown-rendered h6,
+body.lumen-tokyo-night .cm-editor .HyperMD-header-6 {
+    font-size: 0.9em; font-weight: 400; color: #565f89;
+}
+
+/* Tokyo Night — h1 subtle border */
 body.lumen-tokyo-night .markdown-rendered h1 {
-    border-bottom: 1px solid #232433;
+    border-bottom: 1px solid #2a2b3d;
     padding-bottom: 8px;
     margin-bottom: 18px;
-    letter-spacing: -0.01em;
 }
 
 /* Tokyo Night — links */
 body.lumen-tokyo-night .markdown-rendered .internal-link,
 body.lumen-tokyo-night .markdown-rendered .external-link {
+    color: #7aa2f7;
     text-decoration: none;
     background-image: linear-gradient(to right, #7aa2f7, #7aa2f7);
     background-size: 0 1.5px;
@@ -1132,15 +1326,16 @@ body.lumen-tokyo-night .markdown-rendered .external-link:hover {
 /* Tokyo Night — blockquote */
 body.lumen-tokyo-night .markdown-rendered blockquote {
     border-left: 3px solid #7dcfff;
-    background: rgba(122, 162, 247, 0.06);
+    background: rgba(122, 162, 247, 0.07);
     border-radius: 0 6px 6px 0;
     padding: 8px 18px;
     margin: 0 0 16px;
+    color: #8a93b8;
 }
 
 /* Tokyo Night — bold / italic */
 body.lumen-tokyo-night .markdown-rendered strong,
-body.lumen-tokyo-night .cm-strong { color: #7aa2f7; }
+body.lumen-tokyo-night .cm-strong { color: #7aa2f7; font-weight: 700; }
 body.lumen-tokyo-night .markdown-rendered em,
 body.lumen-tokyo-night .cm-em    { color: #bb9af7; font-style: italic; }
 
@@ -1150,6 +1345,6 @@ body.lumen-tokyo-night .cm-inline-code {
     background: rgba(122, 162, 247, 0.1);
     color: #7aa2f7;
     border-radius: 4px;
-    padding: 0 5px;
+    padding: 1px 5px;
     font-size: 0.88em;
 }
