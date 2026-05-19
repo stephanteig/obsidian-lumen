@@ -177,9 +177,6 @@ body.lumen-paper-ink {
     --h4-size:    1.15em;
     --h5-size:    1em;
     --h6-size:    0.88em;
-    --h1-font:    Georgia, "Palatino Linotype", "Book Antiqua", serif;
-    --h2-font:    Georgia, "Palatino Linotype", "Book Antiqua", serif;
-
     /* Bold / Italic */
     --bold-color:   #0a0a08;
     --bold-weight:  700;
@@ -241,7 +238,6 @@ body.lumen-paper-ink {
     --shadow-l: 0 4px 16px rgba(0,0,0,0.1), 0 12px 40px rgba(0,0,0,0.08);
 
     /* Typography */
-    --font-text-theme:      Georgia, "Palatino Linotype", "Book Antiqua", serif;
     --font-interface-theme: system-ui, -apple-system, "Segoe UI", sans-serif;
     --line-height-normal:   1.7;
     --file-line-width:      720px;
@@ -251,12 +247,10 @@ body.lumen-paper-ink {
 body.lumen-paper-ink .markdown-rendered h1,
 body.lumen-paper-ink .cm-editor .HyperMD-header-1 {
     font-size: 2.4em; font-weight: 700; color: #0a0a08;
-    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
 }
 body.lumen-paper-ink .markdown-rendered h2,
 body.lumen-paper-ink .cm-editor .HyperMD-header-2 {
     font-size: 1.8em; font-weight: 700; color: #141310;
-    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
 }
 body.lumen-paper-ink .markdown-rendered h3,
 body.lumen-paper-ink .cm-editor .HyperMD-header-3 {
@@ -596,9 +590,6 @@ body.lumen-iron-press {
     --h4-size:    1.15em;
     --h5-size:    1em;
     --h6-size:    0.88em;
-    --h1-font:    Georgia, "Playfair Display", "Palatino Linotype", serif;
-    --h2-font:    Georgia, "Palatino Linotype", serif;
-
     /* Bold / Italic */
     --bold-color:   #8a1818;
     --bold-weight:  700;
@@ -658,7 +649,6 @@ body.lumen-iron-press {
     --shadow-l: 0 4px 16px rgba(0,0,0,0.12), 0 12px 40px rgba(0,0,0,0.09);
 
     /* Typography */
-    --font-text-theme:      Georgia, "Palatino Linotype", serif;
     --font-interface-theme: system-ui, -apple-system, "Segoe UI", sans-serif;
     --line-height-normal:   1.7;
     --file-line-width:      740px;
@@ -668,18 +658,15 @@ body.lumen-iron-press {
 body.lumen-iron-press .markdown-rendered h1,
 body.lumen-iron-press .cm-editor .HyperMD-header-1 {
     font-size: 2.4em; font-weight: 800; color: #050505;
-    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
     letter-spacing: -0.02em;
 }
 body.lumen-iron-press .markdown-rendered h2,
 body.lumen-iron-press .cm-editor .HyperMD-header-2 {
     font-size: 1.8em; font-weight: 700; color: #111110;
-    font-family: Georgia, "Palatino Linotype", serif;
 }
 body.lumen-iron-press .markdown-rendered h3,
 body.lumen-iron-press .cm-editor .HyperMD-header-3 {
     font-size: 1.4em; font-weight: 700; color: #1d1d1c;
-    font-family: Georgia, "Palatino Linotype", serif;
 }
 body.lumen-iron-press .markdown-rendered h4,
 body.lumen-iron-press .cm-editor .HyperMD-header-4 {
@@ -1015,8 +1002,6 @@ body.lumen-soft-dusk {
     --h4-size:    1.12em;
     --h5-size:    1em;
     --h6-size:    0.88em;
-    --h1-font:    Georgia, "Palatino Linotype", serif;
-
     /* Bold / Italic */
     --bold-color:   #e0a8b8;
     --bold-weight:  700;
@@ -1074,7 +1059,6 @@ body.lumen-soft-dusk {
     --shadow-l: 0 4px 20px rgba(0,0,0,0.35), 0 12px 48px rgba(0,0,0,0.25);
 
     /* Typography */
-    --font-text-theme:      Georgia, "Palatino Linotype", serif;
     --font-interface-theme: system-ui, -apple-system, "Segoe UI", sans-serif;
     --line-height-normal:   1.7;
     --file-line-width:      720px;
@@ -1084,12 +1068,10 @@ body.lumen-soft-dusk {
 body.lumen-soft-dusk .markdown-rendered h1,
 body.lumen-soft-dusk .cm-editor .HyperMD-header-1 {
     font-size: 2.1em; font-weight: 600; color: #f0e4ed;
-    font-family: Georgia, "Palatino Linotype", serif;
 }
 body.lumen-soft-dusk .markdown-rendered h2,
 body.lumen-soft-dusk .cm-editor .HyperMD-header-2 {
     font-size: 1.65em; font-weight: 600; color: #e4d6e2;
-    font-family: Georgia, "Palatino Linotype", serif;
 }
 body.lumen-soft-dusk .markdown-rendered h3,
 body.lumen-soft-dusk .cm-editor .HyperMD-header-3 {
