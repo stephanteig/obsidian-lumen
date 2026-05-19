@@ -220,6 +220,10 @@ body.lumen-paper-ink {
     --nav-item-background-active:     #e2d8be;
     --nav-item-background-hover:      #e8e1cc;
 
+    /* Buttons */
+    --interactive-normal:             #dfd8c4;
+    --interactive-hover:              #cfc6b0;
+
     /* Workspace */
     --tab-background-active:          #f8f4ec;
     --titlebar-background:            #ede5d4;
@@ -426,6 +430,10 @@ body.lumen-lavender-fog {
     --nav-item-background-active:     #ddd2e6;
     --nav-item-background-hover:      #e4dcea;
 
+    /* Buttons */
+    --interactive-normal:             #d6cce2;
+    --interactive-hover:              #c6bbd4;
+
     /* Workspace */
     --tab-background-active:          #f4f1f7;
     --titlebar-background:            #e0d8e7;
@@ -628,6 +636,10 @@ body.lumen-iron-press {
     --nav-item-color-active:          #050505;
     --nav-item-background-active:     #d0c9bd;
     --nav-item-background-hover:      #d8d4ca;
+
+    /* Buttons */
+    --interactive-normal:             #ccc8bf;
+    --interactive-hover:              #bcb8ae;
 
     /* Workspace */
     --tab-background-active:          #e9e7e2;
